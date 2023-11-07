@@ -1,4 +1,6 @@
 ---
+import Cardes from "../components/Cardes.svelte";
+import Periodos from "../components/Periodos.svelte";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -14,7 +16,7 @@ import Layout from "../layouts/Layout.astro";
         
         ">
             <div class="modal-content">
-                <div class="bg-cobalt fg-white">
+                <div class="">
                     <h5 class="modal-title text-white" id="exampleModalLabel4">Datos para el ingreso</h5>
                     
                 </div>
@@ -37,14 +39,7 @@ import Layout from "../layouts/Layout.astro";
                            
                         </div>
                         <div class="form-group">
-                            <label for="periodonotas">Período
-                                <span class="spinner-border spinner-border-sm spperiodo d-none" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </span>
-                            </label>
-                            <select name="periodo" data-role="select" id="periodonotas" class="" tabindex="-1">
-
-                            </select>
+                            <Periodos/>
 
                         </div>
                         <div class="d-flex gap-2 w-100">
@@ -68,8 +63,7 @@ import Layout from "../layouts/Layout.astro";
                 <div class="float-right">
                     <a href="/" class="button secondary"
                         data-bs-dismiss="modal">Cerrar</a>
-                    <button type="button" class="button primary m-1">Aceptar<i
-                            class="bi bi-search ms-2"></i>
+                    <button type="button" class="button primary m-1">Aceptar <i class="fa-solid fa-user p-1"></i>
                         <span class="spinner-border spinner-border-sm spcid d-none" role="status">
                             <span class="visually-hidden">Loading...</span>
                         </span>
@@ -79,7 +73,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </div>
 </div>
-
+<Cardes info="prueba"/>
 </Layout>
 
 <style>
