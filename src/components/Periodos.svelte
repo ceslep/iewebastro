@@ -15,7 +15,6 @@
   });
 
   const traduce=(node:HTMLSelectElement)=>{
-    Metro.makePlugin("#periodos","select")
   }
 
  const change=(e:any)=>{
