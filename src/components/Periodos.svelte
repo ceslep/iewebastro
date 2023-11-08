@@ -2,7 +2,6 @@
    import 'metro4/build/css/metro-all.min.css';
 	import { type Periodo } from './types/tipos.ts';
   import { afterUpdate, onMount } from "svelte";
-  import * from 'metro4';
   let periodos:Periodo[]=[];
 
   onMount(async ()=>{
@@ -31,7 +30,7 @@
         <span class="visually-hidden">Loading...</span>
     </span>
 </label>
-<Select></Select>
+
 <!-- <select id="periodos" on:change={change} use:traduce name="periodo" data-role="select"  class="" tabindex="-1">
   <option value=""></option>
   {#each periodos as periodo(periodo)}
